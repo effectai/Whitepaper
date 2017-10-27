@@ -1,6 +1,6 @@
 \documentclass{article}
 
-\title{Effect Network \\ \vspace{16pt} \large \textbf{DRAFT}}
+\title{Effect Network - Decentralised network for Artificial Intelligence \\ \vspace{16pt} \large \textbf{DRAFT}}
 \date{\today}
 \author{Jesse Eisses, Laurens Verspeek \\
   \small \texttt{\{jeisses, lverspeek\}@itsavirus.com}}
@@ -15,37 +15,49 @@
 
 
 \section{Introduction}
-
 In the past half-decade there has been a rapid growth in the number of
 practical Artificial Intelligence applications around us. Smart
-devices, like self driving cars, face and voice recognition in mobile
+services, like self-driving cars, face and voice recognition in mobile
 phones and image translation are getting a central place in everyday
 life. This rise can be explained by the recent advances in machine
 learning research in combination with the large adoption from the
 industry. While the academic achievements are available to the public,
 most applied AI algorithms are developed and run at large corporations
 behind closed doors. Three major reasons that make the development
-inaccessible for individuals is given below:
+inaccessible for individuals are given below:
 
 \begin{description}
 \item[Data processing] A common property of intelligent applications
   is that they perform tasks that traditionally require human
   feedback. Such tasks involve processing unstructured data and
   finding a pattern that can be used to provide useful output. These
-  application are trained on large datasets with annotations. Obtaining
+  applications are trained on large datasets with annotations. Obtaining
   an annotated dataset is non-trivial and requires a lot of time and
   money.
+  
+  \emph{Effect} introduces a micro-tasking platform that connects a 
+  large task-force of workers to any entity that requires human feedback 
+  on some form of data of any size. This is explained in Section \ref{sec:phase1}.
+  
 \item[Diverging tasks] An obstacle when developing a complex
   algorithm is the need to interact with parts of the world outside
-  the algorithms domain. For example, a self driving car will need to
-  identify road signs around the world. Practice teaches us that these
-  situations can best be treated as a knowledge system where the
+  the current domain. For example: a self-driving car learning to steer 
+  will also need to identify road signs around the world. This
+  situation can best be treated as a knowledge system where the
   classification of the sign is done by an external application. This
-  is a large burden for small
+  quickly increases the amount of work needed.
+  
+  The \emph{Effect Network} is an exchange with a rich ontology of 
+  specialist AI applications. Individual applications can find each 
+  other to buy or sell information, as specified in section x.
+  
 \item[Computational cost] Developing and training a large AI is a
   computational intensive task, and requires a technical
   infrastructure capable of processing terabytes of data, doing
-  batched processing on multiple GPUs and coordinating the results.
+  batched processing on multiple GPUs and coordinating the results. 
+  
+  \emph{Effect} proposes a system to train and run intelligent 
+  algorithms in a distributed fashion in section x.
 \end{description}
 
 To make the development of AI applications more accessible, and to
@@ -54,13 +66,14 @@ decentralized ecosystem called the \emph{Effect Network}. The network
 is designed to provide a fully decentralized alternative to the
 markets shown in table~\ref{tab:service_compare}. The decentralization
 is achieved by running on a blockchain that supports Turning-complete
-smart contracts.
+smart contracts.\\
+
 
 \begin{table}
   \centering
   \begin{tabular}[h]{l|l|l}
     \textbf{Market} & \textbf{Suppliers} & \textbf{Market Cap.} \\ \hline
-    Micro tasking & Amazone Mechenical Turk, Fiverr, \dots & \dots \\ 
+    Micro tasking & Amazone Mechanical Turk, Fiverr, \dots & \dots \\ 
     AI as a service & Watson, Amazon Rekognition, \dots & \dots \\
     Computational platform & Google Cloud ML, Amazone AI, \dots & \dots 
   \end{tabular}
@@ -69,15 +82,36 @@ smart contracts.
 
 The \emph{Effect Network}, like other decentralized applications,
 directly connects supply and demand without the need for an
-intermediary party. Competitive prices \dots
+intermediary party. Competitive prices \dots\\
 
+The \emph{Effect Network} will significantly improve the global Artificial Intelligence market:
+\begin{itemize}
+    \item \textbf{Accessibility.} By directly linking supply and demand through our micro-tasking platform (see Section \ref{sec:phase1}) the \emph{Effect Network} will make training AI algorithms easier, faster and cheaper. This will enable people who don't have access to a large dataset or a big network to train their AI algorithm.
+    \item \textbf{Accuracy.} The \emph{Effect Network} is an exchange with a rich ontology of specialist AI applications. Individual applications can find each 
+  other to buy or sell information, as specified in Section \ref{sec:phase2}. Through this exchange users can use data sets with significantly higher complexities to train their AI algorithms.
+    \item \textbf{Performance.} People can directly buy existing datasets on the \emph{Effect Exchange} (Section \ref{sec:phase2}) or quickly create their own dataset by creating micro-task on the \emph{Effect Mechanical Turk} platform (Section \ref{sec:phase1}). By enabling people to retrieve accurate datasets quickly, they can immediately use these datasets to train AI Algorithms.
+    \item \textbf{Interoperability.} By putting the AI algorithms on the blockchain and creating a standard to which these AI algorithms have to comply to, we can truly decentralize AI and achieve interoperability between individual AIs. The combination of multiple AI algorithms will result in powerful capabilities and emergent intelligence that no single AI algorithm can achieve on his own. 
+\end{itemize}
+
+\section{Decentralized Mechanical Turk}
+\label{sec:phase1}
+- micro-tasking platform\dots\\
+Yhe \emph{Effect Mechanical Turk} platform is a decentralised, peer to peer marketplace for work that requires human intelligence. Based on centralised business models like Amazon Mechanical Turk, Fiverr, Crowdsource and Guru.com. It’s a workforce on demand. The crowd sourcing technology enables requesters to create tasks to be completed by human agents in exchange for compensation. The compensation is in the form of the cryptocurrency AIX. The platform allows users to select from a list of tasks to complete from requestors any time, anywhere and from any device. The task are called Human Intelligence Tasks or HIT’s for short. The providers of the Hit’s are called Requesters. These tasks are created by anyone who needs the power of human intelligence. When a user (worker) completes a task (HIT) they are paid with the Effect.Ai token called AIX.\\
+
+\section{Decentralized AI Exchange}
+\label{sec:phase2}
+- exchange with a rich ontology of specialist AI applications. Individual applications can find each other to buy or sell information\dots -
+
+\section{Decentralized AI Algorithms}
+\label{sec:phase3}
+- Put AI algorithms on the blockchain. The algorithms can interact with each other\dots -
 \section{Products}
 
 The \emph{Effect Network} consists of 3 main products/platforms?
 
 \subsection{Human Intelligence Tasks}
 
-\subsection{Effect Network?}
+\subsection{Effect Network}
 
 \subsection{Computational Platform}
 
