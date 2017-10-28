@@ -95,33 +95,126 @@ The \emph{Effect Network} will significantly improve the global Artificial Intel
 
 \section{Decentralized Mechanical Turk}
 \label{sec:phase1}
-- micro-tasking platform\dots\\
-Yhe \emph{Effect Mechanical Turk} platform is a decentralised, peer to peer marketplace for work that requires human intelligence. Based on centralised business models like Amazon Mechanical Turk, Fiverr, Crowdsource and Guru.com. It’s a workforce on demand. The crowd sourcing technology enables requesters to create tasks to be completed by human agents in exchange for compensation. The compensation is in the form of the cryptocurrency AIX. The platform allows users to select from a list of tasks to complete from requestors any time, anywhere and from any device. The task are called Human Intelligence Tasks or HIT’s for short. The providers of the Hit’s are called Requesters. These tasks are created by anyone who needs the power of human intelligence. When a user (worker) completes a task (HIT) they are paid with the Effect.Ai token called AIX.\\
+The \emph{Effect Mechanical Turk} platform is a decentralized, peer to
+peer marketplace for work that requires human intelligence.  It
+provides similar features as centralized services like Amazon
+Mechanical Turk\footnote{}, Fiverr\footnote{}, Crowdsource\footnote{}
+and Guru.com\footnote{}. It is a crowd sourcing technology that
+enables requesters to submit tasks that can be completed by human
+agents in exchange for compensation. Users can work on tasks from
+requesters at any time, anywhere and from any device. The task are
+called Human Intelligence Tasks or HIT’s for short. The providers of
+the HIT’s are called \emph{requesters}. When a user completes a task,
+they are paid with with a network token called AIX.
 
-\section{Decentralized AI Exchange}
+\subsection{Tasks}
+In essence a task involves providing feedback on a (multi-)media
+asset. A task has the following properties:
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}[h]{r|l}
+    Dataset & URL \\
+    Description & description of the task \\ 
+    Contract ID & smart contract that will handle task \\
+    Blueprint & data for the contract \\ 
+    Required \emph{honor} & require trusted users \\
+    Reward & rewarded AIX upon completion \\
+    Num. ratings & number of ratings per user \\
+    Rating timeout & timeout on performing a rating \\ 
+    Expiration  & block ID after which task expires \\
+    Sequence id & for sequencing examples (optional)\\
+    Data credentials & to unlock private datasets \\
+  \end{tabular}
+  \caption{Properties of a task}
+  \label{tab:task}
+\end{table}
+
+A task refers to a dataset that can contain any amount of media
+assets. The contract ID of the task will validate the format of the
+data. Extracting and presenting examples form the dataset is done by
+the user interface.
+
+The structure and required feedback for a task are defined bye the
+contract ID and the blueprint.
+
+\subsection{Media}
+Media assets are often large and of varying form. A blockchain is not
+a suitable database for storing this kind of information. Other
+decentralized storage options, like BitTorrent\footnote{} and
+IPFS\footnote{}, are specialized in these types of assets. For this
+reason the network will use such a hash-based distributed file
+storage, where each media asset can be revered to by a single hash.
+
+Note that the feedback on a \emph{task} can also involve storing media
+assets, for example during image segmentation. In this case the
+ratings asset will be stored on the distributed storage, and a hash
+and checksum of the rating are stored on the blockchain.
+
+Requesters will also be able to supply datasets through traditional
+channels, like Amazone S3, Google Cloud Storage and FTP.
+
+\subsection{Privacy}
+The blockchain is decentralized and open by nature. There are several
+measures that must be taken to make sure the Effect network can be
+used for vulnerable information. The network can provide privacy for
+the following cases:
+
+\begin{description}
+\item[Datasets] Requesters can provide their dataset in encrypted
+  form. Only selected users will be able to decrypt or access the
+  data. This is determined by network smart contracts using Public Key
+  Encryption, where selected users can decrypt the dataset
+  credentials.
+\item[User ratings] Tasks can be made anonymous, so that feedback can
+  not be traced back to a specific user.
+\end{description}
+
+Tasks that involve privacy features will be more computational
+expensive, thus will also have a higher network fee.
+
+\section{Decentralized AI Services}
 \label{sec:phase2}
 - exchange with a rich ontology of specialist AI applications. Individual applications can find each other to buy or sell information\dots -
 
 \section{Decentralized AI Algorithms}
 \label{sec:phase3}
 - Put AI algorithms on the blockchain. The algorithms can interact with each other\dots -
-\section{Products}
-
-The \emph{Effect Network} consists of 3 main products/platforms?
-
-\subsection{Human Intelligence Tasks}
-
-\subsection{Effect Network}
-
-\subsection{Computational Platform}
 
 \section{Community}
+The described network can be deployed and used as a decentralized
+application as-is. However, in order for the network to grow and be
+sustainable, we believe there has to be a form of governance. Parties
+should have incentive to use the AIX token for the purpose AI
+tasks. Investors looking for quick monetary gain should be discouraged
+and pump-and-dump schemes should be avoided, in order for the network
+to grow and slowly take market value from the existing centralized
+services.
 
-\subsection{AIX token}
+\subsection{AIX and the Galaxy Pool}
+It is important to maintain liquidity in AIX, especially during the
+early days when there is no listing on exchanges. 
 
-\subsection{Quality and Fraud}
+\begin{enumerate}
+\item Workers should always be able to sell their AIX rewards
+\item Requesters and network users should always be able to buy AIX
+\end{enumerate}
 
-\subsection{Governance}
+For a new token on the market this kind of liquidity can be hard to
+achieve and can be hurt by speculative trading.
+
+The Effect Network will maintain a central pool of tokens to provide
+liquidity, encourage adoption and stabilize network fees. This pool is
+called the Galaxy Pool and consists of mix of AIX and native
+tokens. Several rules will drive the Galaxy Pool towards an
+equilibrium balance. These rules can be later be refined by means of
+governance as is discussed in section~\ref{sec:governance}.
+
+\subsection{Honor Tokens and Fraud}
+The honor token is a token that can not be traded
+
+\subsection{Proof of Commitment and Governance}
+\label{sec:governance}
 
 \section{Examples}
 
