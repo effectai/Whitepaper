@@ -1,0 +1,40 @@
+\documentclass[crop,tikz]{standalone}
+\usepackage{tikz, tikz-3dplot}
+\begin{document}
+\begin{tikzpicture}[
+  ball/.style = {circle, draw, align=center},
+  box/.style = {draw, align=center},
+  txt/.style = {align=center, font=\it, fill=white},
+  ]
+
+  \node[ball, text width=2.5cm](galaxy) at (6.0, 3.0) {Galaxy Pool}; 
+  \node[ball, text width=1.7cm](requester) at (1.0, 7.0) {Requesters \\ \& Services}; 
+  \node[box, text width=4cm](contracts) at (0.0, 3.0) {Effect Service Contracts}; 
+  \node[ball, text width=1.7cm](users) at (1.0, -1.0) {Users}; 
+  \node[txt, text width=1.7cm](ico) at (9.0, 7.0) {ICO}; 
+  \node[txt, text width=1.7cm](governance) at (11.0, 4.0) {Governance}; 
+  \node[txt, text width=1.7cm](affiliate) at (9.0, -1.0) {Affiliate programs}; 
+
+  \draw[->] (galaxy.north) to[bend right=45] node[txt]{tainted \\ AIX} (requester.east); 
+  \draw[->] (requester) to node[txt]{native \\ tokens} (galaxy.100); 
+
+  \draw[->] (requester) to [xshift=800pt](contracts);
+  \draw[->] (requester) to [xshift=-800pt](contracts);
+  \draw[->] (requester) to node[txt]{tainted AIX} (contracts);
+
+  \draw[<-] (users) to [xshift=800pt](contracts);
+  \draw[<-] (users) to [xshift=-800pt](contracts);
+  \draw[<-] (users) to node[txt]{clean AIX} (contracts);
+  
+  \draw[->,dashed] (contracts) to node[txt]{tax} (galaxy);
+  \draw[->,dashed] (ico) to[bend left] node[txt]{AIX \\ \& native tokens} (galaxy);
+  \draw[->,dashed] (governance) to[bend left] node[txt]{commitment} (galaxy);
+  \draw[->,dashed] (galaxy) to node[txt]{discounts} (affiliate);
+
+  \draw[<-] (galaxy.south) to[bend left=45] node[txt]{clean \\ AIX} (users.east); 
+  \draw[<-] (users) to node[txt]{native \\ tokens} (galaxy.260); 
+\end{tikzpicture}
+\end{document}
+
+  % \draw[->] (galaxy.north) to [bend right] node[txt]{tainted \\ AIX} (requester.east); % ...
+  % \draw[->] ([xshift=-5pt,yshift=-15pt]requester.east) to [bend right] node[txt]{native \\ tokens} ([xshift=-20,yshift=-5pt]galaxy.north); % ...

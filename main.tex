@@ -1,5 +1,7 @@
 \documentclass{article}
 
+\usepackage{graphicx}
+
 \title{Effect Network - Decentralised network for Artificial Intelligence \\ \vspace{16pt} \large \textbf{DRAFT}}
 \date{\today}
 \author{Jesse Eisses, Laurens Verspeek \\
@@ -12,7 +14,6 @@
 \begin{abstract}
 
 \end{abstract}
-
 
 \section{Introduction}
 In the past half-decade there has been a rapid growth in the number of
@@ -135,7 +136,7 @@ assets. The contract ID of the task will validate the format of the
 data. Extracting and presenting examples form the dataset is done by
 the user interface.
 
-The structure and required feedback for a task are defined bye the
+The structure and required feedback for a task are defined by the
 contract ID and the blueprint.
 
 \subsection{Media}
@@ -191,26 +192,38 @@ and pump-and-dump schemes should be avoided, in order for the network
 to grow and slowly take market value from the existing centralized
 services.
 
+\begin{figure}[htb]
+\includegraphics[width=\textwidth]{pictures/galaxy.pdf}
+\caption{Diagram of the relation between the different Effect
+  Community elements.}
+\end{figure}
+
 \subsection{AIX and the Galaxy Pool}
 It is important to maintain liquidity in AIX, especially during the
-early days when there is no listing on exchanges. 
+early days when there is no listing on exchanges. Ideally the
+following rules should always hold at all times:
 
 \begin{enumerate}
-\item Workers should always be able to sell their AIX rewards
-\item Requesters and network users should always be able to buy AIX
+\item Workers are able to sell their AIX rewards for native tokens
+\item Requesters and network users are able to buy AIX
 \end{enumerate}
 
 For a new token on the market this kind of liquidity can be hard to
 achieve and can be hurt by speculative trading.
 
 The Effect Network will maintain a central pool of tokens to provide
-liquidity, encourage adoption and stabilize network fees. This pool is
-called the Galaxy Pool and consists of mix of AIX and native
-tokens. Several rules will drive the Galaxy Pool towards an
-equilibrium balance. These rules can be later be refined by means of
+liquidity, encourage adoption and stabilize network fees. This
+reservoir is called the Galaxy Pool and consists of a mix of AIX and
+native tokens. Several rules will drive the Galaxy Pool towards an
+equilibrium. These rules can be later be refined by means of
 governance as is discussed in section~\ref{sec:governance}.
 
+The Galaxy Pool ensures stable exchange rates for users of the
+platform at all times. The pool is not suitable for day traders, as
+only \emph{tainted} coins can be bought.
+
 \subsection{Honor Tokens and Fraud}
+\label{sec:fraud}
 The honor token is a token that can not be traded
 
 \subsection{Proof of Commitment and Governance}
