@@ -1,0 +1,60 @@
+\documentclass[crop,tikz]{standalone}
+\usepackage{tikz, tikz-3dplot}
+\usetikzlibrary{shapes.geometric}
+\begin{document}
+\begin{tikzpicture}[
+  ball/.style = {circle, draw, align=center, text width=2.0cm},
+  job/.style = {circle, ball color=black!80, text width=0.15cm, shading=ball},
+  box/.style = {draw, align=center},
+  triangle/.style = {draw, regular polygon,
+        regular polygon sides=3, text width=0.25cm},
+  txt/.style = {align=center, font=\it, fill=white},
+  ]
+
+  \newcommand{\Grid}[5]{
+    \coordinate[] (#5-left) at (#1 - #3*0.5, #2 + 1.5 * #3);
+    \coordinate[] (#5-left2) at (#1 - #3*0.5, #2 + 1.5 * #3-0.5cm);
+    \coordinate[] (#5-left3) at (#1 - #3*0.5, #2 + 1.5 * #3+1.0cm);
+    \coordinate (#5-top) at (#1 + #3 * 2 - #3*0.5, #2 + #3 * 4 - #3*0.2);
+    \coordinate (#5-bottom) at (#1 + #3 * 2 - #3*0.5, 0);
+    \foreach \i in {0,...,3}
+    \foreach \j in {0,...,3} {
+      \begin{scope}[xshift=#1+#3*\i, yshift=#2+#3*\j]
+        
+        \node[#4] (#5\i-\j) at (0, 0) {};
+      \end{scope}
+    }
+  }
+
+  % \Grid{7.0cm}{0.25cm}{0.75cm}{job}{joblist};
+  \node[triangle, text width=20.5] (joblist) at (8cm, 1.42) {Jobs};
+
+  \node[ball] (worker) at (0.9cm, 1.42cm) {Worker \\ Interface};
+  \node[ball] (requester) at (0.9cm, 5.42cm) {Requester \\ Interface};
+
+  \node[draw, cube, text width=2cm, align=center] (storage) at (-6cm, 1.42cm) {Decentralized File Storage};
+
+  \begin{scope}[xshift=0.3cm, yshift=-4.0cm]
+    \node[triangle] (jobs8) [xshift=-1.2cm] {};
+    \node[triangle] (jobs) {};
+    \node[triangle] (jobse) [xshift=1.2cm] {};
+    \node[triangle] (jobs) [xshift=-0.6cm,yshift=1.03cm] {};
+    \node[triangle] (jobs9) [xshift=0.6cm,yshift=1.03cm] {};
+    \node[triangle] (jobs) [xshift=1.8cm,yshift=1.03cm] {};
+    \node[triangle] (jobsx) [xshift=2.4cm] {};
+    \node[font=\bt, yshift=0.5cm, xshift=-0.65cm, fill=white, draw] (titl) at (jobse) {Job contracts};
+  \end{scope}
+
+  \draw[->] (worker) to node[txt]{1. register} (joblist);
+
+  \draw[->] (worker) to [yshift=25cm] node[txt]{2. invoke job \\ contract} (jobs9);
+  \draw[->] (worker) to node[txt]{3. fetch files} (storage);
+  \draw[->, bend right] (worker) to  node[font=\it, left, align=center]{4. submit \\ work} (jobs8);
+  \draw[->, bend right] (jobsx) to  node[txt]{5. approve work} (joblist);
+  \draw[<-, bend right] (worker)  to node[txt]{6. payout} (joblist);
+
+  \draw[->,  dashed] (requester)  to node[txt]{upload} (storage);
+  \draw[->,  dashed] (requester)  to node[txt]{submit \\ \& deposit} (joblist);
+
+  \end{tikzpicture}
+\end{document}
