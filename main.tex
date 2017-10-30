@@ -5,19 +5,20 @@
 \title{Effect Network - Decentralised network for Artificial Intelligence \\ \vspace{16pt} \large \textbf{DRAFT}}
 \date{\today}
 \author{Jesse Eisses, Laurens Verspeek \\
-  \small \texttt{\{jeisses, lverspeek\}@itsavirus.com}}
+  \small \texttt{\{jeisses, lverspeek\}@effect.ai}}
 
 \begin{document}
 
 \maketitle
 
 \begin{abstract}
-
+Decentralized open network for AI
 \end{abstract}
+
 
 \section{Introduction}
 In the past half-decade there has been a rapid growth in the number of
-practical Artificial Intelligence applications around us. Smart
+practical Artificial Intelligence (AI) applications around us. Smart
 services, like self-driving cars, face and voice recognition in mobile
 phones and image translation are getting a central place in everyday
 life. This rise can be explained by the recent advances in machine
@@ -94,21 +95,34 @@ The \emph{Effect Network} will significantly improve the global Artificial Intel
     \item \textbf{Interoperability.} By putting the AI algorithms on the blockchain and creating a standard to which these AI algorithms have to comply to, we can truly decentralize AI and achieve interoperability between individual AIs. The combination of multiple AI algorithms will result in powerful capabilities and emergent intelligence that no single AI algorithm can achieve on his own. 
 \end{itemize}
 
-\section{Decentralized Mechanical Turk}
+\section{Phase 1: Decentralized Mechanical Turk}
 \label{sec:phase1}
 The \emph{Effect Mechanical Turk} platform is a decentralized, peer to
 peer marketplace for work that requires human intelligence.  It
 provides similar features as centralized services like Amazon
-Mechanical Turk\footnote{}, Fiverr\footnote{}, Crowdsource\footnote{}
+Mechanical Turk\footnote{https://www.mturk.com}, Fiverr\footnote{}, Crowdsource\footnote{}
 and Guru.com\footnote{}. It is a crowd sourcing technology that
 enables requesters to submit tasks that can be completed by human
 agents in exchange for compensation. Users can work on tasks from
-requesters at any time, anywhere and from any device. The task are
-called Human Intelligence Tasks or HIT’s for short. The providers of
+requesters at any time, anywhere and from any device. The tasks are
+called Human Intelligence Tasks (HIT). The providers of
 the HIT’s are called \emph{requesters}. When a user completes a task,
 they are paid with with a network token called AIX.
 
+\subsection{Requestors}
+\emph{Effect Requestors} can put tasks (see Section \ref{subsec:tasks}) on the \emph{Effect Mechanical Turk} platform to be completed by workers. the requestors can decide how many AIX the workers will get for each completed task. The requestors can retrieve the results from the \emph{Effect Mechanical Turk} platform and use these results to, for example, train their AI algorithm. \emph{Effect Mechanical Turk} gives requestors access to an on-demand, scalable and distributed workforce.
+
+\subsection{Workers}
+\emph{Effect Workers} can complete the tasks from the requestors in exchange for the AIX tied to these tasks (see Section \ref{subsec:tasks}).
+
+
 \subsection{Tasks}
+\label{subsec:tasks}
+A task refers to a dataset that can contain any amount of media
+assets. The contract ID of the task will validate the format of the
+data. Extracting and presenting examples form the dataset is done by
+the user interface.
+
 In essence a task involves providing feedback on a (multi-)media
 asset. A task has the following properties:
 
@@ -174,11 +188,11 @@ the following cases:
 Tasks that involve privacy features will be more computational
 expensive, thus will also have a higher network fee.
 
-\section{Decentralized AI Services}
+\section{Phase 2: Decentralized AI Exchange}
 \label{sec:phase2}
 - exchange with a rich ontology of specialist AI applications. Individual applications can find each other to buy or sell information\dots -
 
-\section{Decentralized AI Algorithms}
+\section{Phase 3: Decentralized AI Algorithms}
 \label{sec:phase3}
 - Put AI algorithms on the blockchain. The algorithms can interact with each other\dots -
 
@@ -192,38 +206,33 @@ and pump-and-dump schemes should be avoided, in order for the network
 to grow and slowly take market value from the existing centralized
 services.
 
-\begin{figure}[htb]
-\includegraphics[width=\textwidth]{pictures/galaxy.pdf}
-\caption{Diagram of the relation between the different Effect
-  Community elements.}
-\end{figure}
-
 \subsection{AIX and the Galaxy Pool}
 It is important to maintain liquidity in AIX, especially during the
-early days when there is no listing on exchanges. Ideally the
-following rules should always hold at all times:
+early days when there is no listing on exchanges. 
 
 \begin{enumerate}
-\item Workers are able to sell their AIX rewards for native tokens
-\item Requesters and network users are able to buy AIX
+\item Workers should always be able to sell their AIX rewards
+\item Requesters and network users should always be able to buy AIX
 \end{enumerate}
 
 For a new token on the market this kind of liquidity can be hard to
 achieve and can be hurt by speculative trading.
 
 The Effect Network will maintain a central pool of tokens to provide
-liquidity, encourage adoption and stabilize network fees. This
-reservoir is called the Galaxy Pool and consists of a mix of AIX and
-native tokens. Several rules will drive the Galaxy Pool towards an
-equilibrium. These rules can be later be refined by means of
+liquidity, encourage adoption and stabilize network fees. This pool is
+called the Galaxy Pool and consists of a mix of AIX and native
+tokens. Several rules will drive the Galaxy Pool towards an
+equilibrium balance. These rules can be later be refined by means of
 governance as is discussed in section~\ref{sec:governance}.
 
 The Galaxy Pool ensures stable exchange rates for users of the
 platform at all times. The pool is not suitable for day traders, as
 only \emph{tainted} coins can be bought.
+\begin{figure}[htb]
+\includegraphics[width=\textwidth]{pictures/galaxy.pdf}
+\end{figure}
 
 \subsection{Honor Tokens and Fraud}
-\label{sec:fraud}
 The honor token is a token that can not be traded
 
 \subsection{Proof of Commitment and Governance}
