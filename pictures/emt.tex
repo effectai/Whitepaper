@@ -27,7 +27,7 @@
   }
 
   % \Grid{7.0cm}{0.25cm}{0.75cm}{job}{joblist};
-  \node[triangle, text width=20.5] (joblist) at (8cm, 1.42) {Jobs};
+  \node[triangle, text width=20.5] (joblist) at (8cm, 1.42) {Tasks};
 
   \node[ball] (worker) at (0.9cm, 1.42cm) {Worker \\ Interface};
   \node[ball] (requester) at (0.9cm, 5.42cm) {Requester \\ Interface};
@@ -42,7 +42,7 @@
     \node[triangle] (jobs9) [xshift=0.6cm,yshift=1.03cm] {};
     \node[triangle] (jobs) [xshift=1.8cm,yshift=1.03cm] {};
     \node[triangle] (jobsx) [xshift=2.4cm] {};
-    \node[font=\bt, yshift=0.5cm, xshift=-0.65cm, fill=white, draw] (titl) at (jobse) {Job contracts};
+    \node[font=\bt, yshift=0.5cm, xshift=-0.65cm, fill=white, draw] (titl) at (jobse) {Task contracts};
   \end{scope}
 
   \draw[->] (worker) to node[txt]{1. register} (joblist);
